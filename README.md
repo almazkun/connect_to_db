@@ -1,16 +1,24 @@
-# python_template_repo
-Python template repository
+# Connect to Snowflake db
+https://www.snowflake.com/en/
 
-# what is it?
-This is a template repository for python projects.
-- Uses pipenv to manage dependencies
-- Some common commands in Makefile
-- Github Actions testing
+## Usage
 
+* Provide your Snowflake credential to `.env`:
+```
+cp .env.example .env
+```
 
-# How to use
-* git clone "https://github.com/almazkun/python_template_repo.git"
-* cd python_template_repo
-* pipenv install `dependency`
-* modify `main.py`
-* make main
+* Run test connection:
+```
+make main
+```
+    export PYTHONWRITEBYTECODE=1
+    export PYTHONUNBUFFERED=1
+    pipenv run python main.py
+    Loading .env environment variables...
+    Connecting...
+    Cursor <snowflake.connector.cursor.SnowflakeCursor object at 0x10c7d3fd0> current_version: 6.28.1
+
+## Prerequisite
+* pipenv (https://pipenv.pypa.io/en/latest/)
+* make (https://www.gnu.org/software/make/)
